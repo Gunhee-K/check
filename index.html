@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Mapper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASy5UVV-2EFbOZFsatHtumZ1VEFY_84rU&callback=initMap" async defer></script>
+</head>
+<body>
+
+    <h1>Find Events Near You</h1>
+
+    <div>
+        <input type="text" id="zipCode" placeholder="Enter ZIP Code">
+        <button onclick="fetchEvents()">Search Events</button>
+    </div>
+
+    <h2>Events</h2>
+    <div id="events"></div>
+
+    <h2>Add Event</h2>
+    <input type="text" id="eventName" placeholder="Event Name">
+    <input type="text" id="eventLocation" placeholder="Location">
+    <input type="date" id="eventDate">
+    <input type="text" id="eventDescription" placeholder="Description">
+    <button onclick="addEvent()">Add Event</button>
+
+    <h2>Delete Event</h2>
+    <input type="text" id="eventId" placeholder="Event ID">
+    <button onclick="deleteEvent()">Delete Event</button>
+
+    <h2>Google Maps</h2>
+    <div id="map"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
